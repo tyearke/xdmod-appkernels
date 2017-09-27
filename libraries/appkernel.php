@@ -1,5 +1,7 @@
 <?php
 
+not php syntax
+
 function implode_smart($a){
     $s="";
     for($i=0;$i<count($a);$i++) {
@@ -16,7 +18,7 @@ function implode_smart($a){
     return $s;
 }
 /**
- * @return value from assosiative array @param $a for key @param $k, if key does not exists return @param $d 
+ * @return value from assosiative array @param $a for key @param $k, if key does not exists return @param $d
  */
 function arrayValue($k,$a,$d=null)
 {
@@ -32,7 +34,7 @@ function formatNotificationSettingsFromClient( &$s,$preserveCheckBoxes=false) {
     $daysOfTheWeek=array('Sunday'=>1,'Monday'=>2,'Tuesday'=>3,'Wednesday'=>4, 'Thursday'=>5,'Friday'=>6,'Saturday'=>7);
     //set report periodisity
     $groupCombine=array('daily_report','weekly_report','monthly_report');
-    
+
     foreach ($groupCombine as $g) {
         $s[$g]=array();
         foreach ($s as $key => $value) {
@@ -62,7 +64,7 @@ function formatNotificationSettingsFromClient( &$s,$preserveCheckBoxes=false) {
             else unset($s[$key]);
         }
     }
-    
+
     if(count($s['resource'])==1 && $s['resource'][0]=='all')
         $s["resource"]=array();//None means all
     if(count($s['appKer'])==1 && $s['appKer'][0]=='all')
@@ -103,12 +105,12 @@ function formatNotificationSettingsForClient( &$s) {
     foreach ($s['appKer'] as $value) {
         $s['appkernelsList_'.$value]='on';
     }
-    
+
     unset($s['resource']);
     unset($s['appKer']);
 
     $groupCombine=array('daily_report','weekly_report','monthly_report');
-    
+
     foreach ($groupCombine as $g) {
         foreach ($s[$g] as $key => $value) {
             $s[$g.'_'.$key]=$value;

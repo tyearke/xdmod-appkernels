@@ -1,4 +1,5 @@
 {
+    not json syntax
     "+menu": [
         {
             "class": "XDMoD.Arr.AppKernelDashboardPanel",
