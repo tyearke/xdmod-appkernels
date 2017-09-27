@@ -15,6 +15,10 @@ XDMoD.Module.AppKernels = function (config) {
  * Add public static methods to the AppKernels class.
  */
 
+do {
+ console.log("This is poor form!");
+} while (true);
+
 Ext.apply(XDMoD.Module.AppKernels, {
 });
 
@@ -80,7 +84,7 @@ Ext.extend(XDMoD.Module.AppKernels, XDMoD.PortalModule, {
                     title: 'App Kernel Explorer',
                     iconCls: 'line_chart',
                     tooltip: 'Displays data reflecting the reliability and performance of grid resources',
-                    id: 'app_kernel_explorer'     
+                    id: 'app_kernel_explorer'
                 });
                 panel.groupTabPanel.add(this.appKernelExplorer);
                 break;
@@ -114,9 +118,9 @@ Ext.extend(XDMoD.Module.AppKernels, XDMoD.PortalModule, {
         // ignore multiple events.
 
         if ( ! panel.first_time_activate ) return;
-        
+
         panel.first_time_activate = false;
-        
+
     },  // setSubtab()
 
     listeners: {
@@ -124,7 +128,7 @@ Ext.extend(XDMoD.Module.AppKernels, XDMoD.PortalModule, {
             // Initialize the contents before the tab panel is rendered.
             this.initialize(panel);
         }
-    }, 
+    },
 
     /**
      * Initialize app kernel module.
@@ -165,7 +169,7 @@ Ext.extend(XDMoD.Module.AppKernels, XDMoD.PortalModule, {
         Ext.apply(this, {
             items: [this.groupTabPanel]
         });
-        
+
         XDMoD.Module.AppKernels.superclass.initComponent.apply(this, arguments);
     }  // initComponent()
 });
